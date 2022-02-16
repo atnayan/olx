@@ -1,27 +1,24 @@
 package com.olx.server.items;
 
-import com.olx.server.items.enums.SaleType;
-import com.olx.server.items.enums.Status;
-import com.olx.server.items.enums.Subcategory;
-import com.olx.server.items.enums.categories.MainCategory;
+import com.olx.server.enums.SaleType;
+import com.olx.server.enums.Status;
+import com.olx.server.enums.categories.Category;
 
-import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
 
-@Getter(AccessLevel.PROTECTED)
-@Setter(AccessLevel.PROTECTED)
-public class AbstractItem {
+@Getter
+@Setter
+public abstract class AbstractItem {
 
-    protected Long id;
-    protected String title;
-    protected String description;
-    protected MainCategory mainCategory;
-    protected Subcategory subcategory;
-    protected SaleType saleType;
-    protected Status status;
-    protected double price;
+    private Long id;
+    private String title;
+    private String description;
+    private Category[] category;
+    private SaleType saleType;
+    private Status status;
+    private double price;
 
 
     public AbstractItem() {

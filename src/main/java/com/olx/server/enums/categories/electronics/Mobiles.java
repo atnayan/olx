@@ -1,6 +1,6 @@
-package com.olx.server.items.enums.categories.electronics;
+package com.olx.server.enums.categories.electronics;
 
-import com.olx.server.items.enums.categories.Category;
+import com.olx.server.enums.categories.Category;
 
 
 public enum Mobiles implements Category {

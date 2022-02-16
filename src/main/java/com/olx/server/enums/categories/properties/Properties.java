@@ -1,6 +1,6 @@
-package com.olx.server.items.enums.categories.properties;
+package com.olx.server.enums.categories.properties;
 
-import com.olx.server.items.enums.categories.Category;
+import com.olx.server.enums.categories.Category;
 
 
 public enum Properties implements Category {

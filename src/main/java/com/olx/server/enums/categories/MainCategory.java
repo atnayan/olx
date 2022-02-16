@@ -1,15 +1,16 @@
-package com.olx.server.items.enums.categories;
+package com.olx.server.enums.categories;
 
-import com.olx.server.items.enums.categories.properties.Properties;
-import com.olx.server.items.enums.categories.vehicles.Vehicles;
+import com.olx.server.enums.categories.electronics.Electronics;
+import com.olx.server.enums.categories.properties.Properties;
+import com.olx.server.enums.categories.vehicles.Vehicles;
 
 
-public enum MainCategory {
+public enum MainCategory implements Category {
 
     //J-
     VEHICLES (Vehicles.values()),
     PROPERTIES(Properties.values()),
-    ELECTRONICS,
+    ELECTRONICS(Electronics.values()),
     FURNITURE,
     ELECTRICAL_APPLIANCES,
     FASHION,

@@ -1,6 +1,6 @@
-package com.olx.server.items.enums.categories.vehicles;
+package com.olx.server.enums.categories.vehicles;
 
-import com.olx.server.items.enums.categories.Category;
+import com.olx.server.enums.categories.Category;
 
 
 public enum Vehicles implements Category {

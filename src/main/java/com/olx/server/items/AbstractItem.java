@@ -15,7 +15,7 @@ public abstract class AbstractItem {
     private Long id;
     private String title;
     private String description;
-    private Category[] category;
+    private Category category;
     private SaleType saleType;
     private Status status;
     private double price;

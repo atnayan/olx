@@ -1,6 +1,8 @@
-package com.olx.server.enums.categories.vehicles;
+package com.olx.server.enums.categories.vehicles.cars;
 
-import com.olx.server.enums.categories.Category;
+import com.olx.server.enums.categories.vehicles.cars.models.AudiModel;
+import com.olx.server.enums.categories.vehicles.cars.models.BmwModel;
+import com.olx.server.enums.categories.vehicles.cars.models.MercedesModel;
 
 
 public enum CarBrand {

@@ -6,9 +6,10 @@ import com.olx.server.enums.categories.Category;
 public enum Properties implements Category {
     //J-
     APARTMENTS,
-    VILLAS,
     HOUSES,
     STUDIOS,
+    CHALETS,
+    VILLAS,
     COMMERCIAL,
     INDUSTRIAL,
     BUILDINGS,

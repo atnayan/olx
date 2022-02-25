@@ -1,6 +1,7 @@
 package com.olx.server.items.vehicles;
 
 import com.olx.server.enums.categories.Color;
+import com.olx.server.enums.categories.MainCategory;
 import com.olx.server.enums.categories.vehicles.Transmission;
 import com.olx.server.items.AbstractItem;
 
@@ -20,5 +21,6 @@ public abstract class VehicleItem extends AbstractItem {
 
 
     public VehicleItem() {
+        setCategory(MainCategory.VEHICLES);
     }
 }

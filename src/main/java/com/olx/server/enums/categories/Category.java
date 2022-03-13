@@ -1,4 +1,7 @@
 package com.olx.server.enums.categories;
 
-public interface Category {
+import com.olx.server.enums.IEnum;
+
+
+public interface Category extends IEnum {
 }

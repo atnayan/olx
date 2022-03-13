@@ -1,4 +1,7 @@
 package com.olx.server.enums.categories.vehicles.cars;
 
-public interface CarModel {
+import com.olx.server.enums.IEnum;
+
+
+public interface CarModel extends IEnum {
 }

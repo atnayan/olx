@@ -17,6 +17,6 @@ public enum AudiModel implements CarModel {
     Q3,
     Q5,
     Q7,
-    Q8
+    Q8;
     //J+
 }

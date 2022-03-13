@@ -1,0 +1,11 @@
+com.olx.server.enums.categories.MainCategory
+com.olx.server.enums.categories.electronics.Electronics
+com.olx.server.enums.categories.properties.Properties
+com.olx.server.enums.categories.electronics.Displays
+com.olx.server.enums.categories.electronics.Mobiles
+com.olx.server.enums.categories.electronics.Tablets
+com.olx.server.enums.categories.vehicles.Vehicles
+
+com.olx.server.enums.categories.vehicles.cars.models.BmwModel
+com.olx.server.enums.categories.vehicles.cars.models.AudiModel
+com.olx.server.enums.categories.vehicles.cars.models.MercedesModel

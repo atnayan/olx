@@ -1,8 +1,6 @@
 package com.olx.server.items.vehicles;
 
-import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.*;
 
 import com.olx.server.enums.categories.Color;
 import com.olx.server.enums.categories.MainCategory;
@@ -22,7 +20,9 @@ public abstract class VehicleItem extends AbstractItem {
     private int year;
     private int odometer;
 
+    @Enumerated(EnumType.STRING)
     private Transmission transmission;
+    @Enumerated(EnumType.STRING)
     private Color color;
 
 

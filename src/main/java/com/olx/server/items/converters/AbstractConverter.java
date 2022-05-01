@@ -1,24 +1,28 @@
-package com.olx.server.items;
+package com.olx.server.items.converters;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.ServiceLoader;
 import java.util.stream.Collectors;
 
+import javax.persistence.AttributeConverter;
+
 import com.olx.server.enums.IEnum;
 import com.olx.server.enums.Provider;
 
 
-public abstract class AbstractConverter<S extends IEnum> {
+public abstract class AbstractConverter<S extends IEnum> implements AttributeConverter<S, String> {
     public AbstractConverter() {
     }
 
 
-    protected String convertToDatabaseColumn(S ienum) {
-        return ienum.getName();
+    @Override
+    public String convertToDatabaseColumn(S attribute) {
+        return attribute.getName();
     }
 
-    protected S convertToEntityAttribute(String dbData) {
+    @Override
+    public S convertToEntityAttribute(String dbData) {
         ServiceLoader<Provider> serviceLoader = ServiceLoader.load(Provider.class);
         List<S> list = serviceLoader.stream().map(provider -> (Object[]) provider.get().get()).flatMap(Arrays::stream).map(obj -> (S) obj).collect(Collectors.toList());
         for (S elt : list) {

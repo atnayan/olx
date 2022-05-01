@@ -1,13 +1,6 @@
 package com.olx.server.items;
 
-import javax.persistence.Convert;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.*;
 
 import com.olx.server.enums.RentType;
 import com.olx.server.enums.SaleType;
@@ -22,6 +15,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+//@TypeDef(name = "enum_psql", typeClass = EnumTypePostgresql.class)
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class AbstractItem {
 
@@ -32,10 +26,13 @@ public abstract class AbstractItem {
     private String title;
     private String description;
     @Setter(value = AccessLevel.PROTECTED)
-    @Convert(converter = CategoryConverter.class)
     private Category category;
+    @Enumerated(EnumType.STRING)
     private SaleType saleType;
+    @Enumerated(EnumType.STRING)
     private RentType rentType;
+    @Enumerated(EnumType.STRING)
+//    @Type(type = "enum_psql")
     private Status status;
     private double price;
 

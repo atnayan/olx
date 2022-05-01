@@ -1,4 +1,4 @@
-package com.olx.server.items;
+package com.olx.server;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import com.olx.server.enums.categories.Color;
 import com.olx.server.enums.categories.vehicles.Transmission;
 import com.olx.server.enums.categories.vehicles.cars.BodyType;
 import com.olx.server.enums.categories.vehicles.cars.CarBrand;
-import com.olx.server.enums.categories.vehicles.cars.models.BmwModel;
+import com.olx.server.enums.categories.vehicles.cars.models.AudiModel;
 import com.olx.server.items.vehicles.CarItem;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,8 +45,8 @@ public class ItemConfig {
         carItem.setOdometer(76000);
         carItem.setTransmission(Transmission.AUTOMATIC);
         carItem.setColor(Color.WHITE);
-        carItem.setBrand(CarBrand.BMW);
-        carItem.setModel(BmwModel.X5);
+        carItem.setBrand(CarBrand.AUDI);
+        carItem.setModel(AudiModel.Q5);
         carItem.setBodyType(BodyType.SUV);
         carItem.setRentType(RentType.DAILY);
         return carItem;

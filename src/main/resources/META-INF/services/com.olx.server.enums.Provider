@@ -1,0 +1,4 @@
+com.olx.server.enums.categories.MainCategoryProvider
+
+com.olx.server.enums.categories.vehicles.VehiclesProvider
+com.olx.server.enums.categories.vehicles.cars.models.AudiModelProvider

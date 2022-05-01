@@ -32,7 +32,7 @@ public abstract class AbstractItem {
     private String title;
     private String description;
     @Setter(value = AccessLevel.PROTECTED)
-    @Convert(converter = EnumConverter.class)
+    @Convert(converter = CategoryConverter.class)
     private Category category;
     private SaleType saleType;
     private RentType rentType;

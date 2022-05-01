@@ -1,6 +1,8 @@
-package com.olx.server.items;
+package com.olx.server;
 
 import java.util.List;
+
+import com.olx.server.items.AbstractItem;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

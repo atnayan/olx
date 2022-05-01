@@ -7,7 +7,7 @@ import com.olx.server.enums.categories.vehicles.Vehicles;
 import com.olx.server.enums.categories.vehicles.cars.BodyType;
 import com.olx.server.enums.categories.vehicles.cars.CarBrand;
 import com.olx.server.enums.categories.vehicles.cars.CarModel;
-import com.olx.server.items.EnumConverter;
+import com.olx.server.items.CarModelConverter;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +19,7 @@ import lombok.Setter;
 public class CarItem extends VehicleItem {
 
     private CarBrand brand;
-    @Convert(converter = EnumConverter.class)
+    @Convert(converter = CarModelConverter.class)
     private CarModel model;
     private BodyType bodyType;
 

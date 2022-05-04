@@ -21,6 +21,6 @@ public abstract class PropertyItem extends AbstractItem {
 
 
     public PropertyItem() {
-        setCategory(MainCategory.PROPERTIES);
+        addCategory(MainCategory.PROPERTIES);
     }
 }

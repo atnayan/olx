@@ -19,6 +19,6 @@ public class ApartmentItem extends ResidentialItem {
 
 
     public ApartmentItem() {
-        setCategory(Properties.APARTMENTS);
+        addCategory(Properties.APARTMENTS);
     }
 }

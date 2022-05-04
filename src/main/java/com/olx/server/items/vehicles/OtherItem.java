@@ -10,6 +10,6 @@ import com.olx.server.items.AbstractItem;
 public class OtherItem extends AbstractItem {
 
     public OtherItem() {
-        setCategory(Vehicles.OTHER);
+        addCategory(Vehicles.OTHER);
     }
 }

@@ -1,9 +1,9 @@
 package com.olx.server.enums.categories.vehicles;
 
-import com.olx.server.enums.Provider;
+import com.olx.server.enums.categories.CategoryProvider;
 
 
-public class VehiclesProvider implements Provider<Vehicles[]> {
+public class VehiclesProvider implements CategoryProvider<Vehicles> {
     public VehiclesProvider() {
     }
 

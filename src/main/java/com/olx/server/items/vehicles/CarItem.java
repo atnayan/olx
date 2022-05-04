@@ -26,7 +26,7 @@ public class CarItem extends VehicleItem {
 
 
     public CarItem() {
-        setCategory(Vehicles.CARS);
+        addCategory(Vehicles.CARS);
     }
 
 }

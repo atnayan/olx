@@ -2,6 +2,8 @@ package com.olx.server.items.properties;
 
 import javax.persistence.Entity;
 
+import com.olx.server.enums.categories.properties.Properties;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,5 +18,6 @@ public class HouseItem extends ResidentialItem {
 
 
     public HouseItem() {
+        addCategory(Properties.HOUSES);
     }
 }

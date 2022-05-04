@@ -1,6 +1,17 @@
 package com.olx.server.items;
 
-import javax.persistence.*;
+import java.util.LinkedList;
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.SequenceGenerator;
 
 import com.olx.server.enums.RentType;
 import com.olx.server.enums.SaleType;
@@ -26,7 +37,7 @@ public abstract class AbstractItem {
     private String title;
     private String description;
     @Setter(value = AccessLevel.PROTECTED)
-    private Category category;
+    private List<Category> categories;
     @Enumerated(EnumType.STRING)
     private SaleType saleType;
     @Enumerated(EnumType.STRING)
@@ -38,5 +49,13 @@ public abstract class AbstractItem {
 
 
     public AbstractItem() {
+    }
+
+
+    protected void addCategory(Category cat) {
+        if (categories == null) {
+            categories = new LinkedList<>();
+        }
+        categories.add(cat);
     }
 }

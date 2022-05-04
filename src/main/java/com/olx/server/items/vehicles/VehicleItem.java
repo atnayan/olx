@@ -1,6 +1,10 @@
 package com.olx.server.items.vehicles;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
 import com.olx.server.enums.categories.Color;
 import com.olx.server.enums.categories.MainCategory;
@@ -27,6 +31,7 @@ public abstract class VehicleItem extends AbstractItem {
 
 
     public VehicleItem() {
-        setCategory(MainCategory.VEHICLES);
+        addCategory(MainCategory.VEHICLES);
     }
+
 }

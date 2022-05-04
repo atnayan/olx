@@ -24,7 +24,6 @@ public abstract class AbstractConverter<S extends IEnum, P extends Provider> imp
         final Class<P> providerClass = (Class<P>) ((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[1];
         enumsList = serviceLoader.stream()
                                 .filter(provider -> providerClass.isAssignableFrom(provider.type()))
-                                .filter(provider -> (provider.type()))
                                 .map(provider -> (Object[]) provider.get().get())
                                 .flatMap(Arrays::stream)
                                 .map(obj -> (S) obj)

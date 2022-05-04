@@ -1,4 +1,4 @@
-package com.olx.server.items.converters;
+package com.olx.server.converters;
 
 import java.lang.reflect.ParameterizedType;
 

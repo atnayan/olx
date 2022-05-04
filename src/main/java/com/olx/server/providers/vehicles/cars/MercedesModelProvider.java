@@ -1,6 +1,6 @@
-package com.olx.server.enums.categories.vehicles.cars.models;
+package com.olx.server.providers.vehicles.cars;
 
-import com.olx.server.enums.categories.vehicles.cars.CarModelProvider;
+import com.olx.server.enums.categories.vehicles.cars.models.MercedesModel;
 
 
 public class MercedesModelProvider implements CarModelProvider<MercedesModel> {

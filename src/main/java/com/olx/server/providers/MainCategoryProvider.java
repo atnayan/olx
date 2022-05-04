@@ -1,4 +1,7 @@
-package com.olx.server.enums.categories;
+package com.olx.server.providers;
+
+import com.olx.server.enums.categories.MainCategory;
+
 
 public class MainCategoryProvider implements CategoryProvider<MainCategory> {
     public MainCategoryProvider() {

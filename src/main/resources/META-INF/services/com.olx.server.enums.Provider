@@ -1,6 +1,6 @@
-com.olx.server.enums.categories.MainCategoryProvider
+com.olx.server.providers.MainCategoryProvider
 
-com.olx.server.enums.categories.vehicles.VehiclesProvider
-com.olx.server.enums.categories.vehicles.cars.models.AudiModelProvider
-com.olx.server.enums.categories.vehicles.cars.models.BmwModelProvider
-com.olx.server.enums.categories.vehicles.cars.models.MercedesModelProvider
+com.olx.server.providers.vehicles.VehiclesProvider
+com.olx.server.providers.vehicles.cars.AudiModelProvider
+com.olx.server.providers.vehicles.cars.BmwModelProvider
+com.olx.server.providers.vehicles.cars.MercedesModelProvider

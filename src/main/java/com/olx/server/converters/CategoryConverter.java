@@ -1,4 +1,4 @@
-package com.olx.server.items.converters;
+package com.olx.server.converters;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -7,7 +7,7 @@ import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 
 import com.olx.server.enums.categories.Category;
-import com.olx.server.enums.categories.CategoryProvider;
+import com.olx.server.providers.CategoryProvider;
 
 import org.springframework.stereotype.Component;
 

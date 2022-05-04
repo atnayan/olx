@@ -13,6 +13,8 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.SequenceGenerator;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import com.olx.server.enums.RentType;
 import com.olx.server.enums.SaleType;
 import com.olx.server.enums.Status;
@@ -27,6 +29,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public abstract class AbstractItem {
 
     @Id

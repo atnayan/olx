@@ -2,7 +2,6 @@ package com.olx.server;
 
 import java.util.List;
 
-import com.olx.server.enums.RentType;
 import com.olx.server.enums.SaleType;
 import com.olx.server.enums.Status;
 import com.olx.server.enums.categories.Color;
@@ -48,7 +47,7 @@ public class ItemConfig {
         carItem.setBrand(CarBrand.AUDI);
         carItem.setModel(AudiModel.Q5);
         carItem.setBodyType(BodyType.SUV);
-        carItem.setRentType(RentType.DAILY);
+//        carItem.setRentType(RentType.DAILY);
         return carItem;
     }
 }

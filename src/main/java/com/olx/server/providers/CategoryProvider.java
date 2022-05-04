@@ -1,6 +1,5 @@
 package com.olx.server.providers;
 
-import com.olx.server.enums.Provider;
 import com.olx.server.enums.categories.Category;
 
 

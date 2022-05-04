@@ -1,4 +1,4 @@
-package com.olx.server.enums;
+package com.olx.server.providers;
 
 import java.util.function.Supplier;
 

@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import javax.persistence.AttributeConverter;
 
 import com.olx.server.enums.IEnum;
-import com.olx.server.enums.Provider;
+import com.olx.server.providers.Provider;
 
 
 public abstract class AbstractConverter<S extends IEnum, P extends Provider> implements AttributeConverter<S, String> {

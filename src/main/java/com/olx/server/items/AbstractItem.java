@@ -26,7 +26,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-//@TypeDef(name = "enum_psql", typeClass = EnumTypePostgresql.class)
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class AbstractItem {
 
@@ -43,7 +42,6 @@ public abstract class AbstractItem {
     @Enumerated(EnumType.STRING)
     private RentType rentType;
     @Enumerated(EnumType.STRING)
-//    @Type(type = "enum_psql")
     private Status status;
     private double price;
 

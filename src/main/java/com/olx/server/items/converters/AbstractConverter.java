@@ -1,5 +1,7 @@
 package com.olx.server.items.converters;
 
+import java.lang.reflect.ParameterizedType;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.ServiceLoader;
@@ -11,8 +13,23 @@ import com.olx.server.enums.IEnum;
 import com.olx.server.enums.Provider;
 
 
-public abstract class AbstractConverter<S extends IEnum> implements AttributeConverter<S, String> {
+public abstract class AbstractConverter<S extends IEnum, P extends Provider> implements AttributeConverter<S, String> {
+
+    private final List<S> enumsList;
+
+
     public AbstractConverter() {
+        //J-
+        ServiceLoader<Provider> serviceLoader = ServiceLoader.load(Provider.class);
+        final Class<P> providerClass = (Class<P>) ((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[1];
+        enumsList = serviceLoader.stream()
+                                .filter(provider -> providerClass.isAssignableFrom(provider.type()))
+                                .filter(provider -> (provider.type()))
+                                .map(provider -> (Object[]) provider.get().get())
+                                .flatMap(Arrays::stream)
+                                .map(obj -> (S) obj)
+                                .collect(Collectors.toList());
+        //J+
     }
 
 
@@ -23,9 +40,7 @@ public abstract class AbstractConverter<S extends IEnum> implements AttributeCon
 
     @Override
     public S convertToEntityAttribute(String dbData) {
-        ServiceLoader<Provider> serviceLoader = ServiceLoader.load(Provider.class);
-        List<S> list = serviceLoader.stream().map(provider -> (Object[]) provider.get().get()).flatMap(Arrays::stream).map(obj -> (S) obj).collect(Collectors.toList());
-        for (S elt : list) {
+        for (S elt : enumsList) {
             if (elt.getName().equals(dbData)) {
                 return elt;
             }

@@ -1,9 +1,9 @@
 package com.olx.server.enums.categories.vehicles.cars.models;
 
-import com.olx.server.enums.Provider;
+import com.olx.server.enums.categories.vehicles.cars.CarModelProvider;
 
 
-public class AudiModelProvider implements Provider<AudiModel[]> {
+public class AudiModelProvider implements CarModelProvider<AudiModel> {
     public AudiModelProvider() {
     }
 

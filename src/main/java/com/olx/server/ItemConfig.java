@@ -29,7 +29,7 @@ public class ItemConfig {
         return args -> {
             CarItem car_audi_for_sale = createCarItem("Car AUDI For Sale");
             CarItem car_bmw_for_sale = createCarItem("Car BMW For Sale");
-            itemRepository.saveAll(List.of(car_audi_for_sale));
+            itemRepository.saveAll(List.of(car_audi_for_sale, car_bmw_for_sale));
         };
     }
 

@@ -23,4 +23,8 @@ public class ItemService {
     public List<AbstractItem> getItems() {
         return itemRepository.findAll();
     }
+
+    public void addItem(AbstractItem item) {
+        itemRepository.save(item);
+    }
 }

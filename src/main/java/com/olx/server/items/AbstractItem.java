@@ -13,7 +13,9 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.SequenceGenerator;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import com.olx.server.enums.RentType;
 import com.olx.server.enums.SaleType;
@@ -23,13 +25,18 @@ import com.olx.server.enums.categories.Category;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 
 @Getter
 @Setter
+@ToString
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonTypeInfo(use = JsonTypeInfo.Id.DEDUCTION)
+@JsonIgnoreProperties(value = "categories", allowGetters = true)
+//@JsonDeserialize(using = AbstractItemDeserializer.class)
 public abstract class AbstractItem {
 
     @Id

@@ -1,0 +1,21 @@
+POST http://localhost:8080/api/v1/item
+content-type: application/json
+
+{
+  "title": "Car VW For Sale",
+  "description": "Car Description",
+  "categories": [
+    "VEHICLES",
+    "CARS"
+  ],
+  "saleType": "SALE",
+  "status": "USED",
+  "price": 12000,
+  "year": 2014,
+  "odometer": 76000,
+  "transmission": "AUTOMATIC",
+  "color": "WHITE",
+  "brand": "BMW",
+  "model": "X5",
+  "bodyType": "SUV"
+}

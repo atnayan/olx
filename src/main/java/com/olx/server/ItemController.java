@@ -6,6 +6,8 @@ import com.olx.server.items.AbstractItem;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,6 +28,12 @@ public class ItemController {
     @GetMapping
     public List<AbstractItem> getItems() {
         return itemService.getItems();
+    }
+
+    @PostMapping
+    public void addNewItem(@RequestBody
+        AbstractItem item) {
+        itemService.addItem(item);
     }
 
 }
